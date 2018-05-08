@@ -23,12 +23,14 @@ import TerraSiteIndex17 from '../packages/terra-site/src/examples/divider/Index'
 import TerraSiteIndex18 from '../packages/terra-site/src/examples/doc-template/Index';
 import TerraSiteIndex19 from '../packages/terra-site/src/examples/dynamic-grid/Index';
 import TerraSiteIndex20 from '../packages/terra-site/src/examples/embedded-content-consumer/Index';
+import TerraSiteCheckboxFieldIndex from '../packages/terra-site/src/examples/form-checkbox/CheckboxFieldIndex';
 import TerraSiteIndex21 from '../packages/terra-site/src/examples/form-checkbox/Index';
 import TerraSiteIndex22 from '../packages/terra-site/src/examples/form-field/Index';
 import TerraSiteIndex23 from '../packages/terra-site/src/examples/form-fieldset/Index';
 import TerraSiteIndex24 from '../packages/terra-site/src/examples/form-input/Index';
 import TerraSiteInputFieldIndex from '../packages/terra-site/src/examples/form-input/InputFieldIndex';
 import TerraSiteIndex25 from '../packages/terra-site/src/examples/form-radio/Index';
+import TerraSiteRadioFieldIndex from '../packages/terra-site/src/examples/form-radio/RadioFieldIndex';
 import TerraSiteIndex26 from '../packages/terra-site/src/examples/form-select/Index';
 import TerraSiteIndex27 from '../packages/terra-site/src/examples/form-textarea/Index';
 import TerraSiteTextareaFieldIndex from '../packages/terra-site/src/examples/form-textarea/TextareaFieldIndex';
@@ -2847,6 +2849,11 @@ const componentConfig = {
         path: '/form-checkbox',
         pages: [
           {
+            name: 'Checkbox Field Index',
+            path: '/checkbox-field-index',
+            component: TerraSiteCheckboxFieldIndex,
+          },
+          {
             name: 'Index',
             path: '/index',
             component: TerraSiteIndex21,
@@ -2899,6 +2906,11 @@ const componentConfig = {
             name: 'Index',
             path: '/index',
             component: TerraSiteIndex25,
+          },
+          {
+            name: 'Radio Field Index',
+            path: '/radio-field-index',
+            component: TerraSiteRadioFieldIndex,
           },
         ],
       },

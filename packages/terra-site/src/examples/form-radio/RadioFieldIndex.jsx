@@ -2,8 +2,7 @@
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
-import ReadMe from 'terra-form-radio/docs/README.md';
-import { version } from 'terra-form-radio/package.json';
+import ReadMe from 'terra-form-radio/docs/RadioField.md';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
@@ -22,7 +21,6 @@ class RadioFieldExamples extends React.Component {
   render() {
     return (
       <div>
-        <div id="version">Version: {version}</div>
         <Markdown id="readme" src={ReadMe} />
         <h2>Base Example</h2>
         <DefaultRadioField />

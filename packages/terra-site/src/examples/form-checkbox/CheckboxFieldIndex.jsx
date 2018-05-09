@@ -2,8 +2,7 @@
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
-import ReadMe from 'terra-form-checkbox/docs/README.md';
-import { version } from 'terra-form-checkbox/package.json';
+import ReadMe from 'terra-form-checkbox/docs/CheckboxField.md';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
@@ -22,7 +21,6 @@ class CheckboxExamples extends React.Component {
   render() {
     return (
       <div>
-        <div id="version">Version: {version}</div>
         <Markdown id="readme" src={ReadMe} />
         <PropsTable id="props" src={CheckboxFieldSrc} />
         <h2>Base Example</h2>

@@ -29,13 +29,17 @@ export default class extends React.Component {
   render() {
     return (
       <CheckboxField
-        legend="Pick a Selection"
-        help="You need this"
+        legend="What departments are you looking to work for?"
+        help="These are the core areas we need for graphic designers"
         isInvalid={this.state.selectedAnswers.length <= 0}
-        error="An answer must be chosen"
+        error="You must be willing to work in one of these departments"
+        isInline
+        required
       >
-        <Checkbox id="new-one" labelText="Choice One" onChange={this.handleOnChange} value="choice_one" />
-        <Checkbox id="new-two" labelText="Choice Two" onChange={this.handleOnChange} value="choice_two" />
+        <Checkbox id="ux-dept" name="dept[]" labelText="UX/Interaction Design" onChange={this.handleOnChange} value="ux" />
+        <Checkbox id="magazine-dept" name="dept[]" labelText="Magazine Advertisements" onChange={this.handleOnChange} value="magazine" />
+        <Checkbox id="website-dept" name="dept[]" labelText="Website Advertisements" onChange={this.handleOnChange} value="website" />
+        <Checkbox id="events-dept" name="dept[]" labelText="Event Promotions" onChange={this.handleOnChange} value="events" />
       </CheckboxField>
     );
   }

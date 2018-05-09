@@ -5,13 +5,11 @@ import CheckboxField from 'terra-form-checkbox/lib/CheckboxField';
 
 const disabledCheckbox = () => (
   <CheckboxField
-    legend="Pick a Selection"
-    help="You need this"
-    isInvalid
-    error="An answer must be chosen"
+    legend="Do you have experience with any of the following?"
   >
-    <Checkbox id="choice-one" labelText="Choice One" />
-    <Checkbox id="choice-two" labelText="Choice Two" />
+    <Checkbox id="experience-indesign" name="experience[]" labelText="InDesign" />
+    <Checkbox id="experience-photoshop" name="experience[]" labelText="Photoshop" />
+    <Checkbox id="experience-illustrator" name="experience[]" labelText="Illustrator" />
   </CheckboxField>
 );
 

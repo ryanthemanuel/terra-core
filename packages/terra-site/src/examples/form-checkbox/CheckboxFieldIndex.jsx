@@ -12,6 +12,7 @@ import CheckboxFieldSrc from '!raw-loader!terra-form-checkbox/src/CheckboxField'
 // Examples
 import DefaultCheckboxField from './checkbox_field_examples/DefaultCheckboxField';
 import ControlledCheckboxField from './checkbox_field_examples/ControlledCheckboxField';
+import OptionalCheckboxField from './checkbox_field_examples/OptionalCheckboxField';
 
 class CheckboxExamples extends React.Component {
   constructor() {
@@ -24,12 +25,14 @@ class CheckboxExamples extends React.Component {
         <div id="version">Version: {version}</div>
         <Markdown id="readme" src={ReadMe} />
         <PropsTable id="props" src={CheckboxFieldSrc} />
+        <h2>Base Example</h2>
         <DefaultCheckboxField />
-        <h2 id="longtext">Controlled CheckboxField Example</h2>
+        <h2>Other Examples</h2>
         <ControlledCheckboxField />
+        <OptionalCheckboxField />
       </div>
     );
   }
-  }
+}
 
 export default CheckboxExamples;

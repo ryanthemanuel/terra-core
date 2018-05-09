@@ -35,6 +35,7 @@ export default class extends React.Component {
         help="This cannot be changed when submitted"
         isInvalid={isInvalid}
         error={errorMessage}
+        isInline
         required
       >
         <Radio id="chicken-meal" name="meal" labelText="Chicken" onChange={this.handleOnChange} value="chicken" />

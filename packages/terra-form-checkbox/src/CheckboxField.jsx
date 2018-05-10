@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import IconError from 'terra-icon/lib/icon/IconError';
 import 'terra-base/lib/baseStyles';
 import styles from './CheckboxField.scss';
 
@@ -83,7 +82,6 @@ const CheckboxField = (props, { intl }) => {
     error,
     help,
     hideRequired,
-    htmlFor,
     isInvalid,
     isInline,
     isLegendHidden,
@@ -106,16 +104,16 @@ const CheckboxField = (props, { intl }) => {
   ]);
 
   const legendGroup = (
-    <div className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
-      {<legend {...legendAttrs} className={legendClassNames}>
-        {isInvalid && <span className={cx('error-icon')}></span>}
-        {required && (isInvalid || !hideRequired) && <div className={cx('required')}>*</div>}
+    <legend className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
+      {<div {...legendAttrs} className={legendClassNames}>
+        {isInvalid && <span className={cx('error-icon')} />}
+        {required && !hideRequired && <span className={cx('required')}>*</span>}
         {legend}
-        {required && !isInvalid && hideRequired && <div className={cx('required-hidden')}>*</div>}
-        {showOptional && !required && <div className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</div>}
-      </legend>}
-      {!isInvalid && <div className={cx('error-icon-hidden')}><IconError /></div>}
-    </div>
+        {required && hideRequired && <span className={cx('required-hidden')}>*</span>}
+        {showOptional && !required && <span className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</span>}
+      </div>}
+      {isInvalid && <span className={cx('error-icon-hidden')} />}
+    </legend>
   );
 
   return (

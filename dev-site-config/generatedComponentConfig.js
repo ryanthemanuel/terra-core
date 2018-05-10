@@ -218,6 +218,9 @@ import CustomEventsProvider from '../packages/terra-embedded-content-consumer/te
 import DataStatusProvider from '../packages/terra-embedded-content-consumer/tests/nightwatch/providers/DataStatusProvider';
 import FillProvider from '../packages/terra-embedded-content-consumer/tests/nightwatch/providers/FillProvider';
 import OnReadyProvider from '../packages/terra-embedded-content-consumer/tests/nightwatch/providers/OnReadyProvider';
+import ControlledCheckboxField from '../packages/terra-form-checkbox/examples/test-examples/checkbox-field/ControlledCheckboxField.example';
+import HiddenLegend from '../packages/terra-form-checkbox/examples/test-examples/checkbox-field/HiddenLegend.example';
+import OptionalCheckboxField from '../packages/terra-form-checkbox/examples/test-examples/checkbox-field/OptionalCheckboxField.example';
 import DefaultCheckbox from '../packages/terra-form-checkbox/tests/nightwatch/DefaultCheckbox';
 import DisabledCheckbox from '../packages/terra-form-checkbox/tests/nightwatch/DisabledCheckbox';
 import HiddenLabelCheckbox from '../packages/terra-form-checkbox/tests/nightwatch/HiddenLabelCheckbox';
@@ -1376,6 +1379,27 @@ const componentConfig = {
     name: 'Form Checkbox',
     path: '/form-checkbox',
     tests: [
+      {
+        name: 'Checkbox Field',
+        path: '/checkbox-field',
+        tests: [
+          {
+            name: 'Controlled Checkbox Field',
+            path: '/controlled-checkbox-field',
+            component: ControlledCheckboxField,
+          },
+          {
+            name: 'Hidden Legend',
+            path: '/hidden-legend',
+            component: HiddenLegend,
+          },
+          {
+            name: 'Optional Checkbox Field',
+            path: '/optional-checkbox-field',
+            component: OptionalCheckboxField,
+          },
+        ],
+      },
       {
         name: 'Default Checkbox',
         path: '/default-checkbox',
